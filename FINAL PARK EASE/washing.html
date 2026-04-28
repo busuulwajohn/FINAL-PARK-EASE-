@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Vehicle Washing</title>
+
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="page">
+
+<h2><i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+VEHICLE WASHING AND CLEANING</h2>
+
+<!--  REGISTRATION -->
+<div class="card">
+
+<h3>Vehicle Registration</h3>
+
+<input id="driverName" placeholder="Driver Name">
+<input id="vehicleType" placeholder="Vehicle Type (Car, Truck, Boda...)">
+<input id="numberPlate" placeholder="Number Plate">
+<input id="phone" placeholder="Phone Number">
+
+<input type="date" id="date">
+<input type="time" id="time">
+
+<button onclick="registerVehicle()">Register Vehicle</button>
+
+</div>
+
+<!-- WASHING SERVICE -->
+<div class="card">
+
+<h3>Select Washing Service</h3>
+
+<form id="washingForm">
+
+<select id="washType">
+<option value="10000">Basic Wash - UGX 10,000</option>
+<option value="20000">Premium Wash - UGX 20,000</option>
+<option value="35000">Full Detailing - UGX 35,000</option>
+</select>
+
+<button type="submit">Confirm Payment</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+</div>
+
+<script src="washing.js"></script>
+<script src="access-control.js"></script>
+<script>
+checkAccess(["admin","manager","user"])
+</script>
+</body>
+</html>

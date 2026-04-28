@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- site icon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>CH</text></svg>">
+<title>ParkEase | Charging Service</title>
+
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="page">
+
+<h2><i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+ BATTERY CHARGING SERVICE</h2>
+
+<!-- REGISTRATION -->
+<div class="card">
+
+<h3>Battery Registration</h3>
+
+<input id="ownerName" placeholder="Owner Name">
+<input id="batteryType" placeholder="Battery Type (EV, Bike, Solar...)">
+<input id="batteryId" placeholder="Battery ID / Plate">
+<input id="phone" placeholder="Phone Number">
+
+<input type="date" id="date">
+<input type="time" id="time">
+
+<button onclick="registerBattery()">Register Battery</button>
+
+</div>
+
+<!-- PAYMENT -->
+<div class="card">
+
+<h3>Charging Payment</h3>
+
+<form id="chargingForm">
+
+<input type="number" id="hours" placeholder="Charging Hours" required>
+
+<select id="rate">
+<option value="3000">Standard Charge - UGX 3,000/hr</option>
+<option value="6000">Fast Charge - UGX 6,000/hr</option>
+</select>
+
+<button type="submit">Calculate & Save</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+</div>
+
+<script src="charging.js"></script>
+<script src="access-control.js"></script>
+<script>
+checkAccess(["admin","manager","user"])
+</script>
+</body>
+</html>

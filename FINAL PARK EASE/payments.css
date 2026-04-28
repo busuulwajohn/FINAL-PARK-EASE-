@@ -1,0 +1,176 @@
+/* GLOBAL */
+body{
+background: radial-gradient(circle at top,#0f172a,#020617);
+color:white;
+font-family:Segoe UI;
+margin:0;
+padding:20px;
+}
+
+/* TITLE */
+.title{
+text-align:center;
+margin-bottom:20px;
+color:#38bdf8;
+letter-spacing:2px;
+}
+
+/* CONTROLS */
+.controls{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.controls input{
+flex:1;
+padding:12px;
+border-radius:10px;
+border:none;
+background:#1e293b;
+color:white;
+}
+
+.controls button{
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#2563eb,#6366f1);
+color:white;
+cursor:pointer;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+/* ATTENDANT CARD */
+.card{
+background: rgba(30,41,59,0.6);
+backdrop-filter: blur(12px);
+padding:20px;
+border-radius:16px;
+cursor:pointer;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:scale(1.05);
+background: rgba(51,65,85,0.8);
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:#1e293b;
+padding:25px;
+border-radius:16px;
+text-align:center;
+width:300px;
+}
+
+.modal-content button{
+margin-top:10px;
+}
+
+/* FULLSCREEN */
+.fullscreen-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#020617;
+z-index:1000;
+overflow:auto;
+}
+
+/* HEADER */
+.fullscreen-header{
+display:flex;
+gap:10px;
+padding:20px;
+background:#0f172a;
+position:sticky;
+top:0;
+}
+
+#searchBar{
+flex:1;
+padding:12px;
+border-radius:10px;
+border:none;
+background:#1e293b;
+color:white;
+}
+
+/* TRANSACTIONS */
+.transactions-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.tx-card{
+background: rgba(30,41,59,0.7);
+padding:15px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
+}
+
+.tx-card:hover{
+transform:translateY(-5px);
+}
+/* SECURITY BOX */
+
+.security-box{
+
+background:#0f172a;
+border:1px solid #1e293b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.security-box input{
+
+width:100%;
+padding:10px;
+margin-top:10px;
+background:#020617;
+border:1px solid #1e293b;
+color:white;
+border-radius:8px;
+
+}
+
+.security-box button{
+
+margin-top:15px;
+padding:10px 20px;
+background:#0ea5e9;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+
+}

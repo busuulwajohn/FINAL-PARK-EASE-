@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Smart Parking Ecosystem</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<video autoplay muted loop id="bgVideo">
+<source src="https://cdn.coverr.co/videos/coverr-city-night-drive-1560/1080p.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<header>
+<div class="logo">ParkEase</div>
+<div class="profile-icon" id="profileBtn">Get 👤 Started</div>
+</header>
+
+<section class="hero">
+<h1>Reinventing Urban Parking</h1>
+<p>
+Smart parking system built to optimize city traffic, manage parking operations, and enhance real-time user experience.
+</p>
+
+<div class="cta-group">
+<button id="ctaBtn">Access System</button>
+</div>
+</section>
+
+<section class="info-grid">
+<div class="info-card"><h3>Real-Time Monitoring</h3><p>Track parking slots live.</p></div>
+<div class="info-card"><h3>Role-Based System</h3><p>Admin, Manager & Attendant dashboards.</p></div>
+<div class="info-card"><h3>Secure Payments</h3><p>Safe transactions.</p></div>
+<div class="info-card"><h3>Smart Analytics</h3><p>Data-driven insights.</p></div>
+</section>
+
+<div class="modal" id="authModal">
+<div class="modal-box">
+<span class="close" id="closeBtn">&times;</span>
+
+<div class="tabs">
+<button class="tab active" data-tab="login">Login</button>
+<button class="tab" data-tab="register">Create Account</button>
+</div>
+
+<div id="login" class="tab-content active">
+<select id="loginRole">
+<option value="admin">Admin</option>
+<option value="manager">Manager</option>
+<option value="attendant">Attendant</option>
+</select>
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPassword" placeholder="Password">
+<button id="loginBtn">Login</button>
+</div>
+
+<div id="register" class="tab-content">
+<input type="text" id="regName" placeholder="Full Name">
+<input type="email" id="regEmail" placeholder="Email Address">
+<input type="text" id="regPhone" placeholder="Telephone Number">
+<select id="regRole">
+<option value="admin">Admin</option>
+<option value="manager">Manager</option>
+<option value="attendant">Attendant</option>
+</select>
+<input type="password" id="regPassword" placeholder="Create Password">
+<button id="registerBtn">Register</button>
+</div>
+
+</div>
+</div>
+
+<script src="indexparkease.js"></script>
+
+</body>
+</html>

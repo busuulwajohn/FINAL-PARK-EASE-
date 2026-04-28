@@ -1,0 +1,13 @@
+{
+  "name": "final-parkease-project---copy",
+  "version": "1.0.0",
+  "description": "Josh B",
+  "keywords": [],
+  "license": "ISC",
+  "author": "JOHN",
+  "type": "commonjs",
+  "main": "access-control.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

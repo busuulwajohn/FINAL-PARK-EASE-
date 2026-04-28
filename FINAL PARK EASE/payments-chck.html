@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Transactions</title>
+
+<link rel="stylesheet" href="payments.css">
+</head>
+
+<body>
+
+<h1 class="title">ATTENDANT TRANSACTIONS</h1>
+
+<!-- 🔐 SECURITY AUTH (FOR REFRESH) -->
+<div class="security-box" id="paymentSecurityBox" style="display:none;">
+
+<h3>Security Authentication</h3>
+
+<p>Enter your account password to refresh transactions</p>
+
+<input type="password" id="paymentAuthPassword" placeholder="Enter password">
+
+<button onclick="verifyPaymentAccess()">Verify & Refresh</button>
+
+</div>
+
+
+<!-- CONTROLS -->
+<div class="controls">
+<input type="text" id="attendantSearch" placeholder="Search attendants..." onkeyup="searchAttendants()">
+<!-- <button onclick="refreshAttendants()">⟳ Refresh</button> -->
+ <button onclick="requestPaymentRefresh()">⟳ Refresh</button>
+</div>
+
+<!-- ATTENDANTS -->
+<div id="attendantsContainer" class="grid"></div>
+
+<!-- SERVICES MODAL -->
+<div id="servicesModal" class="modal">
+<div class="modal-content">
+<h2 id="attendantTitle"></h2>
+<div id="servicesList"></div>
+<button onclick="closeServices()">Close</button>
+</div>
+</div>
+
+<!-- FULLSCREEN TRANSACTIONS -->
+<div id="transactionsModal" class="fullscreen-modal">
+
+<div class="fullscreen-header">
+<h2 id="transactionTitle"></h2>
+<input type="text" id="searchBar" placeholder="Search ID, service, time..." onkeyup="filterTransactions()">
+<button onclick="closeTransactions()">Close</button>
+</div>
+
+<div id="transactionsList" class="transactions-grid"></div>
+
+</div>
+
+ <script src="payments.js"></script>
+ <script src="reports.js"></script>
+
+</body>
+</html>

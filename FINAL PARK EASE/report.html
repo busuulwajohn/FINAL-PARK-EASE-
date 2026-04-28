@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | REPORT</title>
+  <!-- site icon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>RPT</text></svg>">
+
+<link rel="stylesheet" href="payments.css">
+<link rel="stylesheet" href="reports.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="report-page">
+
+<h2>DAILY RECEIPT REPORT</h2>
+
+<!-- SEARCH NAVBAR--->
+<div class="activity-page">
+
+<header class="activity-header">
+<button class="back-btn" onclick="history.back()">
+<i class="fa-solid fa-arrow-left"></i>
+</button>
+</header>
+
+<!-- SEARCH BAR -->
+
+<div class="search-bar">
+<i class="fa-solid fa-search"></i>
+<input type="text" id="searchInput"
+placeholder="Search by Name, Plate/ID, Transaction ID, Date, Time  🔍">
+</div>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+<button class="filter active" data-type="all">All</button>
+<button class="filter" data-type="Parking">Parking</button>
+<button class="filter" data-type="Washing">Washing</button>
+<button class="filter" data-type="Charging">Charging</button>
+<button class="filter" data-type="Booking">Booking</button>
+</div>
+
+
+</div>
+<div id="reportList"></div>
+
+<h3 id="totalRevenue"></h3>
+
+<script src="reports.js"></script>
+<script src="access-control.js"></script>
+
+<script>
+checkAccess(["admin","manager"])
+</script>
+
+</body>
+</html>

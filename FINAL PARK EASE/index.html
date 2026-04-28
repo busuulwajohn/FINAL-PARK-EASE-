@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Login</title>
+ <!-- site icon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>PE</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="login-container">
+<div class="login-card">
+
+<h2>ParkEase</h2>
+<p>SMART SERVICE SYSTEM</p>
+
+<form id="loginForm">
+
+<input type="email" id="loginEmail" placeholder="Email" required>
+<input type="password" id="loginPassword" placeholder="Password" required>
+
+<select id="loginRole">
+<option value="admin">Admin</option>
+<option value="manager">Manager</option>
+<option value="attendant">Attendant</option>
+</select>
+
+<button type="submit">Login</button>
+
+</form>
+
+<div class="crt-button">
+<a href="register.html">Create Account</a>
+</div>
+
+</div>
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

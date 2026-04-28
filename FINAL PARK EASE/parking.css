@@ -1,0 +1,117 @@
+body{
+ background: linear-gradient(rgba(11,28,45,0.9), rgba(11,28,45,0.9)),
+                url("backg\ parking.jpg") no-repeat center center/cover;
+color: white;
+font-family: Arial;
+text-align: center;
+}
+
+.booking-page{
+max-width: 500px;
+margin: auto;
+padding: 20px;
+background: rgba(1, 0, 17, 0.774);
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.booking-page input{
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border-radius: 8px;
+border: none;
+background: #02173a;
+color: white;
+}
+
+button{
+width: 100%;
+padding: 12px;
+background: #020950d8;
+border: none;
+border-radius: 8px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover{
+background: #060244;
+transform: scale(1.03);
+}
+
+.service-card{
+margin-top: 30px;
+padding: 20px;
+background: rgba(255,255,255,0.05);
+border-radius: 12px;
+}
+
+.report-page{
+max-width: 700px;
+margin: auto;
+padding: 20px;
+color: white;
+}
+
+.report-card{
+background: rgba(255,255,255,0.05);
+padding: 15px;
+margin: 10px 0;
+border-radius: 10px;
+border-left: 5px solid #02033865;
+}
+
+.report-card p{
+margin: 5px 0;
+}
+
+#totalRevenue{
+margin-top: 20px;
+font-size: 20px;
+color: #ff7a59;
+}
+
+
+
+.page{
+max-width:600px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+background:#1e293b;
+color:white;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#030b50;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+}
+
+.report-card{
+background:rgba(255,255,255,0.05);
+padding:10px;
+margin:10px 0;
+border-left:4px solid #ff7a59;
+}

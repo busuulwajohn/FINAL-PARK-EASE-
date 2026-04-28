@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Booking Service</title>
+
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="page">
+
+<h2><i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+BOOK SERVICES</h2>
+
+<!--  REGISTRATION -->
+<div class="card">
+
+<h3>Vehicle Registration</h3>
+
+<input id="name" placeholder="Driver / Owner Name">
+<input id="vehicleType" placeholder="Vehicle Type">
+<input id="vehicleId" placeholder="Plate / Battery ID">
+<input id="phone" placeholder="Phone Number">
+
+</div>
+
+<!-- SERVICE SELECTION -->
+<div class="card">
+
+<h3>Select Service</h3>
+
+<select id="service">
+<option value="Parking">Parking</option>
+<option value="Charging">Charging</option>
+<option value="Washing">Washing</option>
+</select>
+
+<select id="plan">
+<option value="2000">Parking - Standard (UGX 2000/hr)</option>
+<option value="5000">Parking - Premium (UGX 5000/hr)</option>
+<option value="3000">Charging - Standard (UGX 3000/hr)</option>
+<option value="6000">Charging - Fast (UGX 6000/hr)</option>
+<option value="10000">Washing - Basic (UGX 10000)</option>
+<option value="20000">Washing - Premium (UGX 20000)</option>
+<option value="35000">Washing - Detailing (UGX 35000)</option>
+</select>
+
+</div>
+
+<!--  BOOKING -->
+<div class="card">
+
+<h3>Booking Details</h3>
+
+<input type="date" id="date">
+<input type="time" id="time">
+<input type="number" id="hours" placeholder="Hours (for Parking/Charging)">
+
+<button onclick="createBooking()">Confirm Booking</button>
+
+</div>
+
+<!--  RESULT -->
+<div id="result"></div>
+
+</div>
+
+<script src="booking.js"></script>
+<script src="access-control.js"></script>
+<script>
+checkAccess(["admin","manager","user"])
+</script>
+</body>
+</html>

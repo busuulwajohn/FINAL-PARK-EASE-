@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Dashboard</title>
+
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>DB</text></svg>">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard_attendant.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="toggleSidebar()"></div>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="profile-icon-container">
+            <img id="sidebarProfilePic" src="https://via.placeholder.com/80">
+        </div> 
+
+        <h2>ParkEase</h2>
+
+        <ul>
+            <li><a href="dashboard_admin.html">Dashboard</a></li>
+            <li><a href="payments-chck">Parking</a></li>
+            <li><a href="payments-chck">Charging</a></li>
+            <li><a href="payments-chck">Car Washing</a></li>
+            <li><a href="payments-chck">Book Service</a></li>
+            <li><a href="payments-chck">Payment Activity</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main-wrapper">
+
+        <header class="topbar">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button><br>
+            <h1 id="welcomeMessage"></h1>
+        </header>
+
+        <!-- USER INFO -->
+        <section class="analytics-grid">
+            <div class="analytics-card">
+                <h3>ADMIN USERNAME</h3>
+                <p id="userName"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>SIGN IN E-MAIL</h3>
+                <p id="userEmail"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>ADMIN MEMBERSHIP ID</h3>
+                <p id="userPlate"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>UG TIME STATUS/ UPDATED</h3>
+                <p id="nycClock"></p>
+            </div>
+        </section>
+        <br>
+<!-- BACKG VIDEO CARD -->
+        <div class="analytics-card video-card">
+    <video autoplay muted loop playsinline class="card-video">
+        <source src="Racing2.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="card-content">
+        <h1>ADMIN OVERVIEW INFROMATION</h1>
+        <P>PARKEASE SMART SERVICE SYSTEM</P>
+    </div>
+</div>
+<br>
+
+        <!-- SMALL CARDS -->
+        <section class="cards">
+            <div class="card"><a href="admin-guide.html">ADMIN USER GUIDE</a></div>
+            <div class="card"><a href="payments-chck.html">PAYMENT ACTIVITY</a></div>
+            <div class="card"><a href="account-preview.html">ACCOUNTS-PREVIEW</a></div>
+        </section>
+        <!-- ATTENDANT MONITORING (ADMIN / MANAGER ONLY) -->
+
+<!-- PROFILE MODAL  -->
+<div class="profile-modal" id="profileModal">
+    <div class="profile-modal-content">
+        <span class="close-btn" id="closeProfile">&times;</span>
+        <h2>PROFILE INFO</h2>
+
+        <div class="profile-picture-section">
+            <img id="profilePreview" src="https://via.placeholder.com/120">
+            <input type="file" id="profileUpload" accept="image/*">
+        </div>
+
+        <div class="profile-details">
+            <input type="text" id="editName">
+            <input type="email" id="editEmail">
+            <input type="text" id="editPhone">
+            <input type="text" id="editVehicle">
+            <button id="saveProfile">Save Changes</button>
+        </div>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="core.js"></script>
+<script src="dashboards.js"></script>
+<!-- <script src="dashboard_admin.js"></script> -->
+
+</body>
+</html>

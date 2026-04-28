@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Register</title>
+  <!-- site icon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>REG</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="register-container">
+<div class="register-card">
+
+<h2>Create Account</h2>
+
+<form id="registerForm">
+
+<input type="text" id="fullName" placeholder="Full Name" required>
+<input type="email" id="email" placeholder="Email Address" required>
+<input type="text" id="phone" placeholder="+2567XXXXXXXX" required>
+<input type="text" id="plate" placeholder="Membership ID (e.g MEM 001A)" required>
+
+<select id="regRole">
+<option value="admin">Admin</option>
+<option value="manager">Manager</option>
+<option value="attendant">Attendant</option>
+</select>
+
+<input type="password" id="password" placeholder="Strong Password" required>
+
+<button type="submit">Create Account</button>
+
+</form>
+
+<a href="index.html">Back to Login</a>
+
+</div>
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

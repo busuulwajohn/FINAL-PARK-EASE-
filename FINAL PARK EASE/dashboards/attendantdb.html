@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Dashboard</title>
+
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' 
+    width='100' height='100' fill='%23ff7a59'/><text x='50' y='57' font-size='48' 
+    text-anchor='middle' fill='white' font-family='algerian'>DB</text></svg>">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- MENU BUTTON -->
+<!-- <button class="menu-btn" onclick="toggleSidebar()">☰</button> -->
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="toggleSidebar()"></div>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="profile-icon-container">
+            <img id="sidebarProfilePic" src="https://via.placeholder.com/80">
+        </div> 
+
+        <h2>ParkEase</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="parking.html">Parking</a></li>
+            <li><a href="charging.html">Charging</a></li>
+            <li><a href="washing.html">Car Washing</a></li>
+            <li><a href="booking.html">Book Service</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main-wrapper">
+
+        <header class="topbar">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button><br>
+            <h1 id="welcomeMessage"></h1>
+        </header>
+
+        <!-- USER INFO -->
+        <section class="analytics-grid">
+            <div class="analytics-card">
+                <h3>USERNAME</h3>
+                <p id="userName"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>SIGN IN E-MAIL</h3>
+                <p id="userEmail"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>TEAM MEMBERSHIP ID</h3>
+                <p id="userPlate"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>UG TIME STATUS/ UPDATED</h3>
+                <p id="nycClock"></p>
+            </div>
+        </section>
+
+        <!-- SMALL CARDS -->
+        <section class="cards">
+            <div class="card"><a href="./charging.html">CHARGING SERVICE</a></div>
+            <div class="card"><a href="./parking.html">PARKING SERVICE</a></div>
+            <div class="card"><a href="./washing.html">WASHING SERVICE</a></div>
+            <div class="card"><a href="./booking.html">BOOKING SERVICE</a></div>
+        </section>
+
+        <main class="main-content">
+
+            <section class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>TOTAL AMOUNT USED</h3>
+                    <p id="totalRevenue">UGX 0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>TOTAL TRASACTIONS MADE</h3>
+                    <p id="totalTransactions">0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>TODAY TOTAL SERVICES</h3>
+                    <p id="activeServices">0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>CURRENT SYSTEM STATUS</h3>
+                    <p id="nycStatus">ACTIVE</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<!-- PROFILE MODAL (UNCHANGED) -->
+<div class="profile-modal" id="profileModal">
+    <div class="profile-modal-content">
+        <span class="close-btn" id="closeProfile">&times;</span>
+        <h2>PROFILE INFO</h2>
+
+        <div class="profile-picture-section">
+            <img id="profilePreview" src="https://via.placeholder.com/120">
+            <input type="file" id="profileUpload" accept="image/*">
+        </div>
+
+        <div class="profile-details">
+            <input type="text" id="editName">
+            <input type="email" id="editEmail">
+            <input type="text" id="editPhone">
+            <input type="text" id="editVehicle">
+            <button id="saveProfile">Save Changes</button>
+        </div>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="core.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

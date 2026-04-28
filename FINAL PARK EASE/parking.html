@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase | Parking Service</title>
+
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="parking.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="page">
+
+<h2><i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+ PARKING SERVICE</h2>
+
+<div class="card">
+
+<h3>Vehicle Registration</h3>
+
+<input id="driverName" placeholder="Driver Name">
+<input id="vehicleType" placeholder="Vehicle Type (Truck, Car...)">
+<input id="numberPlate" placeholder="Number Plate">
+<input id="phone" placeholder="Phone Number">
+
+
+<input type="date" id="date">
+<input type="time" id="time">
+
+<button onclick="registerVehicle()">Register Vehicle</button>
+
+</div>
+
+<div class="card">
+
+<h3>Parking Payment</h3>
+
+<form id="parkingForm">
+
+<input type="number" id="hours" placeholder="Hours" required>
+
+<select id="plan">
+<option value="2000">Standard - UGX 2000/hr</option>
+<option value="5000">Premium - UGX 5000/hr</option>
+</select>
+
+<button type="submit">Calculate & Save</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+</div>
+
+<script src="parking.js"></script>
+<script src="access-control.js"></script>
+<script>
+checkAccess(["admin","manager","user"])
+</script>
+</body>
+</html>
